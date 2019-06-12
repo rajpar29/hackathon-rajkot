@@ -1,0 +1,13 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>product-list</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding>
+    <app-product-item *ngFor="let item of productList; let i = index" [productItem]="item" [index]="i"></app-product-item>
+  
+      
+  
+
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-card (click)= "navToDetail()">
+  <ion-card-header>
+    <ion-card-subtitle>{{productItem.categ}}</ion-card-subtitle>
+    <ion-card-title>{{productItem.title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <img [src] ="productItem.imageUrl[0]" alt="" >
+    <p>&#8377;</p>{{productItem.price * productItem.orderQuantity}}
+    <!-- <ion-row>
+    <ion-col>
+      <ion-button color="danger" outline icon-end (click)="removeItem(i)">REMOVE
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row> -->
+  </ion-card-content>
+</ion-card>

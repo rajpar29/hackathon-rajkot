@@ -1,0 +1,46 @@
+<div class="createForm">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" [(ngModel)]="title" name="title" class="form-control" id="title" placeholder="Enter Title" required>
+    </div>
+    <div class="form-group">
+      <label for="title">Product Id</label>
+      <input type="text" [(ngModel)]="prodId" name="prodId" class="form-control" id="prodId" placeholder="Enter Product Id" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea rows="3" [(ngModel)]="description" name="description" class="form-control" id="description" placeholder="Description"
+        required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="selectSem">Select Category</label>
+      <select class="form-control" id="selectCateg" [(ngModel)]="selectCateg" name="selectCateg" required>
+        <option value="crockery">Crockery</option>
+        <option value="toys">Toys</option>
+        <option value="tiles">Tiles</option>
+        <option value="show_piece">Show Piece</option>
+        <option>5</option>
+
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="title">Price</label>
+      <input type="number" [(ngModel)]="price" name="price" class="form-control" id="price" placeholder="Enter Price" required>
+    </div>
+
+    <div class="form-group">
+      <label for="title">Quantity</label>
+      <input type="number" [(ngModel)]="quan" name="quan" class="form-control" id="quan" placeholder="Enter Quantity Available"
+        required>
+    </div>
+
+<app-upload-images (outputDownloadURl)="geturl($event)"></app-upload-images>
+
+
+      <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Create</button>
+      <button type="reset" class="btn btn-primary" (click)="resetForm()">Reset</button>
+
+    </form>
+  </div>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>       <ion-icon name="person"></ion-icon>      Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card>
+              
+        <ion-item (click)= "toCart()">
+          <ion-icon name="cart" slot="start"></ion-icon>
+          <ion-label>Cart</ion-label>
+        </ion-item>
+      
+        <ion-item (click)= "toOrders()" >
+          <ion-icon name="briefcase" slot="start"></ion-icon>
+          <ion-label>My Orders</ion-label>
+        </ion-item>
+
+        <ion-item (click)= "logout()" >
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          <ion-label>Log Out</ion-label>
+        </ion-item>
+      
+        
+      </ion-card>
+
+</ion-content>

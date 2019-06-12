@@ -1,0 +1,12 @@
+<ion-card (click)= "navToDetail()">
+  <ion-card-header>
+    <ion-card-subtitle>{{productItem.categ}}</ion-card-subtitle>
+    <ion-card-title>{{productItem.title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <img [src] ="productItem.imageUrl[0]" alt="" >
+    <p>&#8377;</p>{{productItem.price * productItem.orderQuantity}}
+
+  </ion-card-content>
+</ion-card>

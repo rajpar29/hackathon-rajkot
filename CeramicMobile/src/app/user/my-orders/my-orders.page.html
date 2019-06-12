@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <app-my-orders-item *ngFor="let item of cartProductList; let i = index" [productItem]="item" [index]="i"></app-my-orders-item>
+
+</ion-content>

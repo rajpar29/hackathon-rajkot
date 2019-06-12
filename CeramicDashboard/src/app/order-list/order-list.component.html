@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <app-order-item *ngFor="let item of productList; let i = index" [productItem]="item" [index]="i"></app-order-item>
+
+  </div>
+  <div class="col-md-12">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

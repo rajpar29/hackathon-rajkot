@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{productItem.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let img of productItem.imageUrl">
+      <!-- <img src={{img}}> -->
+      <img [src]="img" alt="">
+
+    </ion-slide>
+  </ion-slides>
+
+  <div class="desc"><p>{{productItem.description}}</p></div>
+  <br><br>
+  <ion-label>Select Quantity</ion-label>
+  <ion-grid text-center>
+    <ion-row>
+      <ion-col>
+        <button ion-button class="plus-button" icon-only outline (click)="plusQuan()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+          {{quanToShow}}
+      </ion-col>
+      <ion-col>
+        <button ion-button class="plus-button" icon-only outline (click)="minusQuan()">
+          <ion-icon name="remove"></ion-icon>
+        </button>
+      </ion-col>
+
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+<ion-footer no-shadow>
+    <ion-toolbar position="bottom">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="buy-for">
+              Buy for
+              <span class="bold">Rs {{priceToShow}}</span>
+  
+            </div>
+          </ion-col>
+          <ion-col>
+              <ion-button color="secondary" (click)="addToCart()">Add to Cart</ion-button>
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+  
+  
+    </ion-toolbar>
+  </ion-footer>

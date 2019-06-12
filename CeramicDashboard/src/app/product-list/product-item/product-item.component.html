@@ -1,0 +1,45 @@
+<!-- <a
+  style="cursor: pointer;"
+  class="list-group-item clearfix"
+  (click)="navToDetail()"
+  routerLinkActive = "active"
+ >
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ productItem.title }}</h4>
+    <p class="list-group-item-text">{{ productItem.description }}</p>
+  </div>
+  <span class="pull-right">
+        <img
+          [src]="productItem.imageUrl[0]"
+          alt="{{ productItem.title }}"
+          class="img-responsive"
+          style="max-height: 50px;">
+  </span>
+</a> -->
+
+
+
+
+<a
+  style="cursor: pointer;"
+  class="list-group-item clearfix"
+  (click)="navToDetail()"
+  routerLinkActive = "active"
+ >
+  <div class="float-right">
+  <img  [src]="productItem.imageUrl[0]"
+  alt="{{ productItem.title }}"
+  style="max-height: 300px; max-width: 110px; padding: 0%">
+  <br><br>
+  <p style="text-align:center">&#x20B9; {{ productItem.price }}</p>
+  </div>
+  <div class="card bg-light mb-3" style="width: 18rem; padding: 0%">
+    <div class="card-body">
+      <h4 class="card-title list-group-item-heading">{{ productItem.title }}</h4>
+      <br>
+      <p class="card-text list-group-item-text">{{ productItem.description }}</p>
+    </div>
+  </div>
+
+
+</a>

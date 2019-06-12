@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-5">
+
+    <app-product-item *ngFor="let item of productList; let i = index" [productItem]="item" [index]="i"></app-product-item>
+
+  </div>
+  <div class="col-md-12">
+    <router-outlet></router-outlet>
+  </div>
+</div>

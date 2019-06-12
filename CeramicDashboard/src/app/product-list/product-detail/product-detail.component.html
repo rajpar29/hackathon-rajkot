@@ -1,0 +1,54 @@
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <img
+      [src]="productItem.imageUrl[0]"
+      alt="{{ productItem.title }}"
+      class="img-responsive"
+      style="max-height: 300px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ productItem.title }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Rs {{ productItem.price }}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    {{ productItem.description }}
+  </div>
+</div>
+ -->
+
+
+
+
+ <div class="container">
+
+  <div class="row">
+      <div class="card mt-4">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                
+                <div class="carousel-item active" *ngFor="let img of productItem.imageUrl">
+                  <img class="d-block w-100 card-img-top img-fluid" 
+                  [src]="img"
+                  alt="{{ productItem.title }}"
+                  class="img-responsive"
+                  style="margin: 0 auto">
+                </div>
+              </div>
+            </div>
+        <div class="card-body">
+          <h3 class="card-title">{{ productItem.title }}</h3>
+          <h4>&#x20B9; {{ productItem.price }}</h4>
+          <p class="card-text">{{ productItem.description }}</p>
+        </div>
+      </div>
+
+      
